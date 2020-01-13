@@ -8,9 +8,9 @@ import org.junit.runner.RunWith;
 @CucumberOptions(
 
         features = "src/test/resources/features",
-        glue = "com/vytrack/step_definitions",
-        tags = "@smoke",
-        dryRun = false
+        glue = "com/vytrack/step_definitions"
+       // tags = "@smoke",
+      //  dryRun = true
 
 
 
