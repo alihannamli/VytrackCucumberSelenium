@@ -1,13 +1,46 @@
 [
   {
-    "line": 1,
+    "line": 2,
     "elements": [
       {
-        "start_timestamp": "2020-01-15T06:44:48.360Z",
+        "line": 4,
+        "name": "open login page and login as store manager",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 4492817747,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "user is on the login page",
+            "match": {
+              "location": "LoginStepDefinitions.user_is_on_the_login_page()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 3282779684,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "user logs in as store manager",
+            "match": {
+              "location": "LoginStepDefinitions.user_logs_in_as_store_manager()"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2020-01-15T21:45:17.149Z",
         "before": [
           {
             "result": {
-              "duration": 3869639,
+              "duration": 2121880,
               "status": "passed"
             },
             "match": {
@@ -15,16 +48,15 @@
             }
           }
         ],
-        "line": 3,
-        "name": "Login as store manager",
+        "line": 8,
+        "name": "Verify dashboard page",
         "description": "",
-        "id": "login;login-as-store-manager",
+        "id": "smoke-test;verify-dashboard-page",
         "after": [
           {
             "result": {
-              "error_message": "java.lang.NullPointerException\n\tat com.vytrack.utilities.Driver.close(Driver.java:88)\n\tat com.vytrack.step_definitions.Hook.teardown(Hook.java:29)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:567)\n\tat cucumber.runtime.Utils$1.call(Utils.java:26)\n\tat cucumber.runtime.Timeout.timeout(Timeout.java:16)\n\tat cucumber.runtime.Utils.invoke(Utils.java:20)\n\tat cucumber.runtime.java.JavaHookDefinition.execute(JavaHookDefinition.java:65)\n\tat cucumber.runner.HookDefinitionMatch.runStep(HookDefinitionMatch.java:16)\n\tat cucumber.runner.TestStep.executeStep(TestStep.java:65)\n\tat cucumber.runner.TestStep.run(TestStep.java:50)\n\tat cucumber.runner.TestCase.run(TestCase.java:50)\n\tat cucumber.runner.Runner.runPickle(Runner.java:50)\n\tat io.cucumber.junit.PickleRunners$NoStepDescriptions.run(PickleRunners.java:146)\n\tat io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:68)\n\tat io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:23)\n\tat org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)\n\tat org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)\n\tat org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)\n\tat org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)\n\tat org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)\n\tat org.junit.runners.ParentRunner.run(ParentRunner.java:363)\n\tat io.cucumber.junit.Cucumber.runChild(Cucumber.java:144)\n\tat io.cucumber.junit.Cucumber.runChild(Cucumber.java:65)\n\tat org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)\n\tat org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)\n\tat org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)\n\tat org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)\n\tat org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)\n\tat io.cucumber.junit.Cucumber$RunCucumber.evaluate(Cucumber.java:174)\n\tat org.junit.runners.ParentRunner.run(ParentRunner.java:363)\n\tat org.junit.runner.JUnitCore.run(JUnitCore.java:137)\n\tat com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:68)\n\tat com.intellij.rt.execution.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:47)\n\tat com.intellij.rt.execution.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:242)\n\tat com.intellij.rt.execution.junit.JUnitStarter.main(JUnitStarter.java:70)\n",
-              "duration": 6928253,
-              "status": "failed"
+              "duration": 304939184,
+              "status": "passed"
             },
             "match": {
               "location": "Hook.teardown(Scenario)"
@@ -36,34 +68,10 @@
         "steps": [
           {
             "result": {
-              "duration": 3890284,
+              "duration": 2015241961,
               "status": "passed"
             },
-            "line": 4,
-            "name": "user is on the login page",
-            "match": {
-              "location": "LoginStepDefinitions.user_is_on_the_login_page()"
-            },
-            "keyword": "Given "
-          },
-          {
-            "result": {
-              "duration": 1212897,
-              "status": "passed"
-            },
-            "line": 5,
-            "name": "user logs in as store manager",
-            "match": {
-              "location": "LoginStepDefinitions.user_logs_in_as_store_manager()"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 1660421,
-              "status": "passed"
-            },
-            "line": 6,
+            "line": 9,
             "name": "user verifies that \"Dashboard\" page subtitle is displayed",
             "match": {
               "arguments": [
@@ -76,14 +84,361 @@
             },
             "keyword": "And "
           }
+        ],
+        "tags": [
+          {
+            "name": "@smoke_test"
+          }
+        ]
+      },
+      {
+        "line": 4,
+        "name": "open login page and login as store manager",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 2753348322,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "user is on the login page",
+            "match": {
+              "location": "LoginStepDefinitions.user_is_on_the_login_page()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 3424120009,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "user logs in as store manager",
+            "match": {
+              "location": "LoginStepDefinitions.user_logs_in_as_store_manager()"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2020-01-15T21:45:27.343Z",
+        "before": [
+          {
+            "result": {
+              "duration": 132241,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hook.setup()"
+            }
+          }
+        ],
+        "line": 11,
+        "name": "Verify Manage Dashboards page",
+        "description": "",
+        "id": "smoke-test;verify-manage-dashboards-page",
+        "after": [
+          {
+            "result": {
+              "duration": 297412023,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hook.teardown(Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 2785230649,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "user navigates to \"Dashboards\" then to \"Manage Dashboards\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Dashboards\"",
+                  "offset": 18
+                },
+                {
+                  "val": "\"Manage Dashboards\"",
+                  "offset": 39
+                }
+              ],
+              "location": "TopMenuStepDefinitions.user_navigates_to_then_to(String,String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1720712365,
+              "status": "passed"
+            },
+            "line": 13,
+            "name": "user verifies that \"All Manage Dashboards\" page subtitle is displayed",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"All Manage Dashboards\"",
+                  "offset": 19
+                }
+              ],
+              "location": "LoginStepDefinitions.user_verifies_that_page_subtitle_is_displayed(String)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@smoke_test"
+          }
+        ]
+      },
+      {
+        "line": 4,
+        "name": "open login page and login as store manager",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 2576546141,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "user is on the login page",
+            "match": {
+              "location": "LoginStepDefinitions.user_is_on_the_login_page()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 2693578173,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "user logs in as store manager",
+            "match": {
+              "location": "LoginStepDefinitions.user_logs_in_as_store_manager()"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2020-01-15T21:45:38.332Z",
+        "before": [
+          {
+            "result": {
+              "duration": 116333,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hook.setup()"
+            }
+          }
+        ],
+        "line": 15,
+        "name": "Verify Vehicle page",
+        "description": "",
+        "id": "smoke-test;verify-vehicle-page",
+        "after": [
+          {
+            "result": {
+              "duration": 292318910,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hook.teardown(Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 2490060932,
+              "status": "passed"
+            },
+            "line": 16,
+            "name": "user navigates to \"Fleet\" then to \"Vehicles\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Fleet\"",
+                  "offset": 18
+                },
+                {
+                  "val": "\"Vehicles\"",
+                  "offset": 34
+                }
+              ],
+              "location": "TopMenuStepDefinitions.user_navigates_to_then_to(String,String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1967613679,
+              "status": "passed"
+            },
+            "line": 17,
+            "name": "user verifies that \"All Cars\" page subtitle is displayed",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"All Cars\"",
+                  "offset": 19
+                }
+              ],
+              "location": "LoginStepDefinitions.user_verifies_that_page_subtitle_is_displayed(String)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@smoke_test"
+          }
+        ]
+      },
+      {
+        "line": 4,
+        "name": "open login page and login as store manager",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 2643176989,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "user is on the login page",
+            "match": {
+              "location": "LoginStepDefinitions.user_is_on_the_login_page()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 3160859941,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "user logs in as store manager",
+            "match": {
+              "location": "LoginStepDefinitions.user_logs_in_as_store_manager()"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2020-01-15T21:45:48.361Z",
+        "before": [
+          {
+            "result": {
+              "duration": 129273,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hook.setup()"
+            }
+          }
+        ],
+        "line": 19,
+        "name": "Verify Accounts page",
+        "description": "",
+        "id": "smoke-test;verify-accounts-page",
+        "after": [
+          {
+            "result": {
+              "duration": 298496054,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hook.teardown(Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 2818359016,
+              "status": "passed"
+            },
+            "line": 20,
+            "name": "user navigates to \"Customers\" then to \"Accounts\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Customers\"",
+                  "offset": 18
+                },
+                {
+                  "val": "\"Accounts\"",
+                  "offset": 38
+                }
+              ],
+              "location": "TopMenuStepDefinitions.user_navigates_to_then_to(String,String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1712326412,
+              "status": "passed"
+            },
+            "line": 21,
+            "name": "user verifies that \"All Accounts\" page subtitle is displayed",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"All Accounts\"",
+                  "offset": 19
+                }
+              ],
+              "location": "LoginStepDefinitions.user_verifies_that_page_subtitle_is_displayed(String)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@smoke_test"
+          }
         ]
       }
     ],
-    "name": "Login",
+    "name": "Smoke test",
     "description": "",
-    "id": "login",
+    "id": "smoke-test",
     "keyword": "Feature",
-    "uri": "file:src/test/resources/features/Login.feature",
-    "tags": []
+    "uri": "file:src/test/resources/features/SmokeTest.feature",
+    "tags": [
+      {
+        "name": "@smoke_test",
+        "type": "Tag",
+        "location": {
+          "line": 1,
+          "column": 1
+        }
+      }
+    ]
   }
 ]
