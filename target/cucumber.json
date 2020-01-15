@@ -1,29 +1,29 @@
 [
   {
-    "line": 1,
+    "line": 2,
     "elements": [
       {
-        "start_timestamp": "2020-01-15T18:43:35.489Z",
+        "start_timestamp": "2020-01-15T20:34:38.604Z",
         "before": [
           {
             "result": {
-              "duration": 1391050,
-              "status": "passed"
+              "duration": 1377596,
+              "status": "skipped"
             },
             "match": {
               "location": "Hook.setup()"
             }
           }
         ],
-        "line": 13,
-        "name": "Login as store manager",
+        "line": 4,
+        "name": "Verify column names",
         "description": "",
-        "id": "login;login-as-store-manager",
+        "id": "all-calendar-events;verify-column-names",
         "after": [
           {
             "result": {
-              "duration": 304993203,
-              "status": "passed"
+              "duration": 20326,
+              "status": "skipped"
             },
             "match": {
               "location": "Hook.teardown(Scenario)"
@@ -35,10 +35,10 @@
         "steps": [
           {
             "result": {
-              "duration": 5890516639,
-              "status": "passed"
+              "duration": 2573966,
+              "status": "skipped"
             },
-            "line": 14,
+            "line": 5,
             "name": "user is on the login page",
             "match": {
               "location": "LoginStepDefinitions.user_is_on_the_login_page()"
@@ -47,47 +47,93 @@
           },
           {
             "result": {
-              "duration": 3543127710,
-              "status": "passed"
+              "duration": 2677345,
+              "status": "skipped"
             },
-            "line": 15,
+            "line": 6,
             "name": "user logs in as store manager",
             "match": {
               "location": "LoginStepDefinitions.user_logs_in_as_store_manager()"
             },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 7,
+            "name": "user navigates to \"Activities\" then to \"Calendar Events\"",
+            "match": {},
             "keyword": "Then "
           },
           {
             "result": {
-              "duration": 2161919569,
-              "status": "passed"
+              "status": "undefined"
             },
-            "line": 16,
-            "name": "user verifies that \"Dashboard\" page subtitle is displayed",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"Dashboard\"",
-                  "offset": 19
-                }
-              ],
-              "location": "LoginStepDefinitions.user_verifies_that_page_subtitle_is_displayed(String)"
-            },
+            "line": 8,
+            "name": "user verifies that column names are displayed",
+            "match": {},
+            "rows": [
+              {
+                "cells": [
+                  "TITLE"
+                ]
+              },
+              {
+                "cells": [
+                  "CALENDAR"
+                ]
+              },
+              {
+                "cells": [
+                  "START"
+                ]
+              },
+              {
+                "cells": [
+                  "END"
+                ]
+              },
+              {
+                "cells": [
+                  "RECURRENT"
+                ]
+              },
+              {
+                "cells": [
+                  "RECURRENCE"
+                ]
+              },
+              {
+                "cells": [
+                  "INVITATION STATUS"
+                ]
+              }
+            ],
             "keyword": "And "
           }
         ],
         "tags": [
           {
-            "name": "@store_manager"
+            "name": "@calendar_events"
           }
         ]
       }
     ],
-    "name": "Login",
-    "description": "  As user, I want to be able to login into vytrack\n  under different roles with username and password",
-    "id": "login",
+    "name": "All calendar events",
+    "description": "",
+    "id": "all-calendar-events",
     "keyword": "Feature",
-    "uri": "file:src/test/resources/features/Login.feature",
-    "tags": []
+    "uri": "file:src/test/resources/features/activities/CalendarEvents.feature",
+    "tags": [
+      {
+        "name": "@calendar_events",
+        "type": "Tag",
+        "location": {
+          "line": 1,
+          "column": 1
+        }
+      }
+    ]
   }
 ]
