@@ -26,7 +26,7 @@ public class Hook {
         }
 
         System.out.println("###############");
-        Driver.closeDriver();
+        Driver.close();
     }
 
 

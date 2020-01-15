@@ -1,107 +1,39 @@
 package com.vytrack.utilities;
 
-import io.github.bonigarcia.wdm.WebDriverManager;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebDriverException;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.chrome.ChromeOptions;
-import org.openqa.selenium.edge.EdgeDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.firefox.FirefoxOptions;
-import org.openqa.selenium.ie.InternetExplorerDriver;
-import org.openqa.selenium.safari.SafariDriver;
-
 import java.io.FileInputStream;
+import java.io.IOException;
 import java.util.Properties;
 
-/**
- * reads the properties file configuration.properties
- */
+//ConfigurationReader.configFile.getProperty("browser") direct access
+//ConfigurationReader.getProperty("browser")
 public class ConfigurationReader {
-
-    private static Properties properties;
+    //this class will be responsible for loading properties file and will provide access
+    //to values based on key names
+    //we use Properties class to load custom .properties files
+    private static Properties configFile;
 
     static {
-
         try {
-            String path = "configuration.properties";
-            FileInputStream input = new FileInputStream(path);
-            properties = new Properties();
-            properties.load(input);
-
-            input.close();
-        } catch (Exception e) {
+            //provides access to file
+            //try/catch block stands for handling exceptions
+            //if exception occurs, code inside a catch block will be executed
+            //any class that is related to InputOutput produce checked exceptions
+            //without handling checked exception, you cannot run a code
+            FileInputStream fileInputStream = new FileInputStream("configuration.properties");
+            //initialize properties object
+            configFile = new Properties();
+            //load configuration.properties file
+            configFile.load(fileInputStream);
+            //close input stream
+            fileInputStream.close();
+        } catch (IOException e) {
+            System.out.println("Failed to load properties file!");
             e.printStackTrace();
-
         }
     }
 
-    public static String get(String keyName) {
-        return properties.getProperty(keyName);
+    public static String getProperty(String key) {
+        return configFile.getProperty(key);
     }
 
-
-    public static class Driver {
-        private Driver() {
-
-        }
-
-        private static WebDriver driver;
-
-        public static WebDriver get() {
-            if (driver == null) {
-                String browser = ConfigurationReader.get("browser");
-                switch (browser) {
-                    case "chrome":
-                        WebDriverManager.chromedriver().setup();
-                        driver = new ChromeDriver();
-                        break;
-                    case "chrome-headless":
-                        WebDriverManager.chromedriver().setup();
-                        driver = new ChromeDriver(new ChromeOptions().setHeadless(true));
-                        break;
-                    case "firefox":
-                        WebDriverManager.firefoxdriver().setup();
-                        driver = new FirefoxDriver();
-                        break;
-                    case "firefox-headless":
-                        WebDriverManager.firefoxdriver().setup();
-                        driver = new FirefoxDriver(new FirefoxOptions().setHeadless(true));
-                        break;
-                    case "ie":
-                        if (!System.getProperty("os.name").toLowerCase().contains("windows"))
-                            throw new WebDriverException("Your OS doesn't support Internet Explorer");
-                        WebDriverManager.iedriver().setup();
-                        driver = new InternetExplorerDriver();
-                        break;
-
-                    case "edge":
-                        if (!System.getProperty("os.name").toLowerCase().contains("windows"))
-                            throw new WebDriverException("Your OS doesn't support Edge");
-                        WebDriverManager.edgedriver().setup();
-                        driver = new EdgeDriver();
-                        break;
-
-                    case "safari":
-                        if (!System.getProperty("os.name").toLowerCase().contains("mac"))
-                            throw new WebDriverException("Your OS doesn't support Safari");
-                        WebDriverManager.getInstance(SafariDriver.class).setup();
-                        driver = new SafariDriver();
-                        break;
-                }
-
-
-
-            }
-
-            return driver;
-        }
-
-        public static void closeDriver() {
-            if (driver != null) {
-                driver.quit();
-                driver = null;
-            }
-        }
-    }
 }
