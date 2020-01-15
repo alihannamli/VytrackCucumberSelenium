@@ -9,8 +9,8 @@ import org.junit.runner.RunWith;
 
         features = "src/test/resources/features",
         glue = "com/vytrack/step_definitions",
-        dryRun = true,
-        tags = "@calendar_events",
+        dryRun = false,
+        tags = "@smoke_test",
         plugin ={"html:target/default-cucumber-reports",
                 "json:target/cucumber.json"}
 

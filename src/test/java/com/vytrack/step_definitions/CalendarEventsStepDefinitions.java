@@ -11,10 +11,14 @@ public class CalendarEventsStepDefinitions {
 
     CalendarEventsPage calendarEventsPage = new CalendarEventsPage();
 
-//    @Then("user navigates to {string} then to {string}")
-//    public void user_navigates_to_then_to(String string, String string2) {
-//
-//    }
+    //    And user verifies that column names are displayed
+//            | TITLE             |
+//            | CALENDAR          |
+//            | START             |
+//            | END               |
+//            | RECURRENT         |
+//            | RECURRENCE        |
+//            | INVITATION STATUS |
 
     @Then("user verifies that column names are displayed")
     public void user_verifies_that_column_names_are_displayed(List<String> dataTable) {
