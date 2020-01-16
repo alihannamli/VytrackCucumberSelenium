@@ -3,11 +3,11 @@
     "line": 1,
     "elements": [
       {
-        "start_timestamp": "2020-01-15T22:11:23.489Z",
+        "start_timestamp": "2020-01-16T20:05:46.275Z",
         "before": [
           {
             "result": {
-              "duration": 1448048,
+              "duration": 1112942,
               "status": "passed"
             },
             "match": {
@@ -15,14 +15,14 @@
             }
           }
         ],
-        "line": 19,
-        "name": "Login as driver",
+        "line": 96,
+        "name": "Login as driver and verify Car - Entities - System - Car - Entities - System page title is correct",
         "description": "",
-        "id": "login;login-as-driver",
+        "id": "login;login-as-\u003crole\u003e-and-verify-\u003ctitle\u003e-page-title-is-correct;drivers;2",
         "after": [
           {
             "result": {
-              "duration": 230165298,
+              "duration": 269704813,
               "status": "passed"
             },
             "match": {
@@ -31,14 +31,14 @@
           }
         ],
         "type": "scenario",
-        "keyword": "Scenario",
+        "keyword": "Scenario Outline",
         "steps": [
           {
             "result": {
-              "duration": 4689364304,
+              "duration": 3688290918,
               "status": "passed"
             },
-            "line": 20,
+            "line": 89,
             "name": "user is on the login page",
             "match": {
               "location": "LoginStepDefinitions.user_is_on_the_login_page()"
@@ -47,38 +47,606 @@
           },
           {
             "result": {
-              "duration": 2670938562,
+              "duration": 2478518699,
               "status": "passed"
             },
-            "line": 21,
-            "name": "user logs in as driver",
-            "match": {
-              "location": "LoginStepDefinitions.user_logs_in_as_driver()"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 327589578,
-              "status": "passed"
-            },
-            "line": 22,
-            "name": "user verifies that \"Quick Launchpad\" page subtitle is displayed",
+            "line": 90,
+            "name": "user logs in as \"driver\"",
             "match": {
               "arguments": [
                 {
-                  "val": "\"Quick Launchpad\"",
-                  "offset": 19
+                  "val": "\"driver\"",
+                  "offset": 16
                 }
               ],
-              "location": "LoginStepDefinitions.user_verifies_that_page_subtitle_is_displayed(String)"
+              "location": "LoginStepDefinitions.user_logs_in_as(String)"
             },
             "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 429735271,
+              "status": "passed"
+            },
+            "line": 91,
+            "name": "user navigates to \"Fleet\" then to \"Vehicles\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Fleet\"",
+                  "offset": 18
+                },
+                {
+                  "val": "\"Vehicles\"",
+                  "offset": 34
+                }
+              ],
+              "location": "TopMenuStepDefinitions.user_navigates_to_then_to(String,String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 616831942,
+              "status": "passed"
+            },
+            "line": 92,
+            "name": "the page title should be \"Car - Entities - System - Car - Entities - System\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Car - Entities - System - Car - Entities - System\"",
+                  "offset": 25
+                }
+              ],
+              "location": "LoginStepDefinitions.thePageTitleShouldBe(String)"
+            },
+            "keyword": "Then "
           }
         ],
         "tags": [
           {
-            "name": "@driver"
+            "name": "@login_with_roles_ddt_2"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2020-01-16T20:05:53.864Z",
+        "before": [
+          {
+            "result": {
+              "duration": 212881,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hook.setup()"
+            }
+          }
+        ],
+        "line": 97,
+        "name": "Login as driver and verify Vehicles Model - Entities - System - Car - Entities - System page title is correct",
+        "description": "",
+        "id": "login;login-as-\u003crole\u003e-and-verify-\u003ctitle\u003e-page-title-is-correct;drivers;3",
+        "after": [
+          {
+            "result": {
+              "duration": 227746851,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hook.teardown(Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 1961636264,
+              "status": "passed"
+            },
+            "line": 89,
+            "name": "user is on the login page",
+            "match": {
+              "location": "LoginStepDefinitions.user_is_on_the_login_page()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 2259635830,
+              "status": "passed"
+            },
+            "line": 90,
+            "name": "user logs in as \"driver\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"driver\"",
+                  "offset": 16
+                }
+              ],
+              "location": "LoginStepDefinitions.user_logs_in_as(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 453369131,
+              "status": "passed"
+            },
+            "line": 91,
+            "name": "user navigates to \"Fleet\" then to \"Vehicles Model\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Fleet\"",
+                  "offset": 18
+                },
+                {
+                  "val": "\"Vehicles Model\"",
+                  "offset": 34
+                }
+              ],
+              "location": "TopMenuStepDefinitions.user_navigates_to_then_to(String,String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 587819137,
+              "status": "passed"
+            },
+            "line": 92,
+            "name": "the page title should be \"Vehicles Model - Entities - System - Car - Entities - System\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Vehicles Model - Entities - System - Car - Entities - System\"",
+                  "offset": 25
+                }
+              ],
+              "location": "LoginStepDefinitions.thePageTitleShouldBe(String)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@login_with_roles_ddt_2"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2020-01-16T20:05:59.363Z",
+        "before": [
+          {
+            "result": {
+              "duration": 96918,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hook.setup()"
+            }
+          }
+        ],
+        "line": 98,
+        "name": "Login as driver and verify Accounts - Customers page title is correct",
+        "description": "",
+        "id": "login;login-as-\u003crole\u003e-and-verify-\u003ctitle\u003e-page-title-is-correct;drivers;4",
+        "after": [
+          {
+            "result": {
+              "duration": 258990156,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hook.teardown(Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 1886064356,
+              "status": "passed"
+            },
+            "line": 89,
+            "name": "user is on the login page",
+            "match": {
+              "location": "LoginStepDefinitions.user_is_on_the_login_page()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 2268829395,
+              "status": "passed"
+            },
+            "line": 90,
+            "name": "user logs in as \"driver\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"driver\"",
+                  "offset": 16
+                }
+              ],
+              "location": "LoginStepDefinitions.user_logs_in_as(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 433386403,
+              "status": "passed"
+            },
+            "line": 91,
+            "name": "user navigates to \"Customers\" then to \"Accounts\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Customers\"",
+                  "offset": 18
+                },
+                {
+                  "val": "\"Accounts\"",
+                  "offset": 38
+                }
+              ],
+              "location": "TopMenuStepDefinitions.user_navigates_to_then_to(String,String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 613009488,
+              "status": "passed"
+            },
+            "line": 92,
+            "name": "the page title should be \"Accounts - Customers\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Accounts - Customers\"",
+                  "offset": 25
+                }
+              ],
+              "location": "LoginStepDefinitions.thePageTitleShouldBe(String)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@login_with_roles_ddt_2"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2020-01-16T20:06:04.831Z",
+        "before": [
+          {
+            "result": {
+              "duration": 143947,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hook.setup()"
+            }
+          }
+        ],
+        "line": 99,
+        "name": "Login as driver and verify Contacts - Customers page title is correct",
+        "description": "",
+        "id": "login;login-as-\u003crole\u003e-and-verify-\u003ctitle\u003e-page-title-is-correct;drivers;5",
+        "after": [
+          {
+            "result": {
+              "duration": 233873973,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hook.teardown(Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 1909872140,
+              "status": "passed"
+            },
+            "line": 89,
+            "name": "user is on the login page",
+            "match": {
+              "location": "LoginStepDefinitions.user_is_on_the_login_page()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 2266400948,
+              "status": "passed"
+            },
+            "line": 90,
+            "name": "user logs in as \"driver\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"driver\"",
+                  "offset": 16
+                }
+              ],
+              "location": "LoginStepDefinitions.user_logs_in_as(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 497962970,
+              "status": "passed"
+            },
+            "line": 91,
+            "name": "user navigates to \"Customers\" then to \"Contacts\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Customers\"",
+                  "offset": 18
+                },
+                {
+                  "val": "\"Contacts\"",
+                  "offset": 38
+                }
+              ],
+              "location": "TopMenuStepDefinitions.user_navigates_to_then_to(String,String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 649717797,
+              "status": "passed"
+            },
+            "line": 92,
+            "name": "the page title should be \"Contacts - Customers\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Contacts - Customers\"",
+                  "offset": 25
+                }
+              ],
+              "location": "LoginStepDefinitions.thePageTitleShouldBe(String)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@login_with_roles_ddt_2"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2020-01-16T20:06:10.395Z",
+        "before": [
+          {
+            "result": {
+              "duration": 161538,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hook.setup()"
+            }
+          }
+        ],
+        "line": 100,
+        "name": "Login as driver and verify Calendar Events - Activities page title is correct",
+        "description": "",
+        "id": "login;login-as-\u003crole\u003e-and-verify-\u003ctitle\u003e-page-title-is-correct;drivers;6",
+        "after": [
+          {
+            "result": {
+              "duration": 231460593,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hook.teardown(Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 1780944813,
+              "status": "passed"
+            },
+            "line": 89,
+            "name": "user is on the login page",
+            "match": {
+              "location": "LoginStepDefinitions.user_is_on_the_login_page()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 2267614997,
+              "status": "passed"
+            },
+            "line": 90,
+            "name": "user logs in as \"driver\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"driver\"",
+                  "offset": 16
+                }
+              ],
+              "location": "LoginStepDefinitions.user_logs_in_as(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 433657941,
+              "status": "passed"
+            },
+            "line": 91,
+            "name": "user navigates to \"Activities\" then to \"Calendar Events\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Activities\"",
+                  "offset": 18
+                },
+                {
+                  "val": "\"Calendar Events\"",
+                  "offset": 39
+                }
+              ],
+              "location": "TopMenuStepDefinitions.user_navigates_to_then_to(String,String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 578790731,
+              "status": "passed"
+            },
+            "line": 92,
+            "name": "the page title should be \"Calendar Events - Activities\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Calendar Events - Activities\"",
+                  "offset": 25
+                }
+              ],
+              "location": "LoginStepDefinitions.thePageTitleShouldBe(String)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@login_with_roles_ddt_2"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2020-01-16T20:06:15.696Z",
+        "before": [
+          {
+            "result": {
+              "duration": 242645,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hook.setup()"
+            }
+          }
+        ],
+        "line": 101,
+        "name": "Login as driver and verify Jobs - System page title is correct",
+        "description": "",
+        "id": "login;login-as-\u003crole\u003e-and-verify-\u003ctitle\u003e-page-title-is-correct;drivers;7",
+        "after": [
+          {
+            "result": {
+              "duration": 252188763,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hook.teardown(Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 1909118483,
+              "status": "passed"
+            },
+            "line": 89,
+            "name": "user is on the login page",
+            "match": {
+              "location": "LoginStepDefinitions.user_is_on_the_login_page()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 2256931926,
+              "status": "passed"
+            },
+            "line": 90,
+            "name": "user logs in as \"driver\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"driver\"",
+                  "offset": 16
+                }
+              ],
+              "location": "LoginStepDefinitions.user_logs_in_as(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 463439288,
+              "status": "passed"
+            },
+            "line": 91,
+            "name": "user navigates to \"System\" then to \"Jobs\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"System\"",
+                  "offset": 18
+                },
+                {
+                  "val": "\"Jobs\"",
+                  "offset": 35
+                }
+              ],
+              "location": "TopMenuStepDefinitions.user_navigates_to_then_to(String,String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 603756572,
+              "status": "passed"
+            },
+            "line": 92,
+            "name": "the page title should be \"Jobs - System\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Jobs - System\"",
+                  "offset": 25
+                }
+              ],
+              "location": "LoginStepDefinitions.thePageTitleShouldBe(String)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@login_with_roles_ddt_2"
           }
         ]
       }
