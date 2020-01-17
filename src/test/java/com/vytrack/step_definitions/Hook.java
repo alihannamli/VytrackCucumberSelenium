@@ -12,7 +12,6 @@ public class Hook {
     @Before
     public void setup(){
         System.out.println();
-        Driver.get().manage().window().maximize();
     }
 
     @After

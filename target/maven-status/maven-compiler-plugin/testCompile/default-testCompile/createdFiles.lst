@@ -1,3 +1,5 @@
+com/vytrack/utilities/ConfigurationReader$Driver.class
 com/vytrack/utilities/ConfigurationReader.class
-com/vytrack/utilities/BrowserUtils.class
 com/vytrack/utilities/Driver.class
+com/vytrack/utilities/BrowserUtils.class
+com/vytrack/utilities/BrowserUtils$1.class
