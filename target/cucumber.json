@@ -3,12 +3,12 @@
     "line": 2,
     "elements": [
       {
-        "start_timestamp": "2020-01-16T23:47:18.022Z",
+        "start_timestamp": "2020-01-17T16:52:20.181Z",
         "before": [
           {
             "result": {
-              "duration": 850015,
-              "status": "skipped"
+              "duration": 3136475726,
+              "status": "passed"
             },
             "match": {
               "location": "Hook.setup()"
@@ -22,8 +22,8 @@
         "after": [
           {
             "result": {
-              "duration": 26514,
-              "status": "skipped"
+              "duration": 377801956,
+              "status": "passed"
             },
             "match": {
               "location": "Hook.teardown(Scenario)"
@@ -35,8 +35,8 @@
         "steps": [
           {
             "result": {
-              "duration": 2075459,
-              "status": "skipped"
+              "duration": 1383256328,
+              "status": "passed"
             },
             "line": 5,
             "name": "user is on the login page",
@@ -47,8 +47,8 @@
           },
           {
             "result": {
-              "duration": 989718,
-              "status": "skipped"
+              "duration": 3022712845,
+              "status": "passed"
             },
             "line": 6,
             "name": "user logs in as store manager",
@@ -59,8 +59,8 @@
           },
           {
             "result": {
-              "duration": 1335723,
-              "status": "skipped"
+              "duration": 2438857330,
+              "status": "passed"
             },
             "line": 7,
             "name": "user navigates to \"Fleet\" then to \"Vehicles\"",
@@ -81,20 +81,32 @@
           },
           {
             "result": {
-              "status": "undefined"
+              "duration": 2607279743,
+              "status": "passed"
             },
             "line": 8,
             "name": "user click on \"Create Car\" button",
-            "match": {},
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Create Car\"",
+                  "offset": 14
+                }
+              ],
+              "location": "CreateCarStepDefinitions.user_click_on_button(String)"
+            },
             "keyword": "And "
           },
           {
             "result": {
-              "status": "undefined"
+              "duration": 11135636807,
+              "status": "passed"
             },
             "line": 9,
             "name": "user adds new car information:",
-            "match": {},
+            "match": {
+              "location": "CreateCarStepDefinitions.user_adds_new_car_information(String,String\u003e\u003e)"
+            },
             "rows": [
               {
                 "cells": [
