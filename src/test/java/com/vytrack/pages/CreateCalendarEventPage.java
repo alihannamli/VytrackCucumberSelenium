@@ -241,6 +241,4 @@ public class CreateCalendarEventPage extends BasePage {
         return endTime.getAttribute("value");
     }
 
-
-
 }
