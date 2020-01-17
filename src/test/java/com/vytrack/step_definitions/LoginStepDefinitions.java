@@ -1,7 +1,6 @@
 package com.vytrack.step_definitions;
 
 import com.vytrack.pages.LoginPage;
-import com.vytrack.utilities.BrowserUtils;
 import com.vytrack.utilities.ConfigurationReader;
 import com.vytrack.utilities.Driver;
 import io.cucumber.java.en.Given;
@@ -88,9 +87,4 @@ public class LoginStepDefinitions {
     }
 
 
-    @Then("the page title should be {string}")
-    public void thePageTitleShouldBe(String string) {
-        BrowserUtils.waitForPageTitle(string); // without wait method, it doesnt wait for page loading and gives Dashboard
-        Assert.assertEquals("Title is incorrect", string, Driver.get().getTitle() );
-    }
 }
