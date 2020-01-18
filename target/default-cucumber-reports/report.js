@@ -1,23 +1,18 @@
-$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("file:src/test/resources/features/fleet/CreateACar.feature");
+$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("file:src/test/resources/features/SmokeTest.feature");
 formatter.feature({
-  "name": "Create new car",
+  "name": "Smoke test",
   "description": "",
   "keyword": "Feature",
   "tags": [
     {
-      "name": "@create_car"
+      "name": "@smoke_test"
     }
   ]
 });
-formatter.scenario({
-  "name": "Create new car",
+formatter.background({
+  "name": "open login page and login as store manager",
   "description": "",
-  "keyword": "Scenario",
-  "tags": [
-    {
-      "name": "@create_car"
-    }
-  ]
+  "keyword": "Background"
 });
 formatter.before({
   "status": "passed"
@@ -34,7 +29,7 @@ formatter.result({
 });
 formatter.step({
   "name": "user logs in as store manager",
-  "keyword": "And "
+  "keyword": "Then "
 });
 formatter.match({
   "location": "LoginStepDefinitions.user_logs_in_as_store_manager()"
@@ -42,9 +37,19 @@ formatter.match({
 formatter.result({
   "status": "passed"
 });
+formatter.scenario({
+  "name": "Verify Manage Dashboards page",
+  "description": "",
+  "keyword": "Scenario",
+  "tags": [
+    {
+      "name": "@smoke_test"
+    }
+  ]
+});
 formatter.step({
-  "name": "user navigates to \"Fleet\" then to \"Vehicles\"",
-  "keyword": "Then "
+  "name": "user navigates to \"Dashboards\" then to \"Manage Dashboards\"",
+  "keyword": "And "
 });
 formatter.match({
   "location": "TopMenuStepDefinitions.user_navigates_to_then_to(String,String)"
@@ -53,53 +58,15 @@ formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "user click on \"Create Car\" button",
-  "keyword": "And "
-});
-formatter.match({
-  "location": "CreateCarStepDefinitions.user_click_on_button(String)"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "user adds new car information:",
-  "rows": [
-    {
-      "cells": [
-        "License Plate",
-        "Driver",
-        "Location",
-        "Model Year",
-        "Color"
-      ]
-    },
-    {
-      "cells": [
-        "TestPlates",
-        "Test Driver",
-        "Washington D.C.",
-        "2020",
-        "Black"
-      ]
-    },
-    {
-      "cells": [
-        "SuperMan",
-        "Cool Driver",
-        "Texas",
-        "2019",
-        "Red"
-      ]
-    }
-  ],
+  "name": "user verifies that \"Dash \" page subtitle is displayed",
   "keyword": "Then "
 });
 formatter.match({
-  "location": "CreateCarStepDefinitions.user_adds_new_car_information(String,String\u003e\u003e)"
+  "location": "LoginStepDefinitions.user_verifies_that_page_subtitle_is_displayed(String)"
 });
 formatter.result({
-  "status": "passed"
+  "error_message": "org.junit.ComparisonFailure: expected:\u003c[Dash ]\u003e but was:\u003c[All Manage Dashboards]\u003e\n\tat org.junit.Assert.assertEquals(Assert.java:115)\n\tat org.junit.Assert.assertEquals(Assert.java:144)\n\tat com.vytrack.step_definitions.LoginStepDefinitions.user_verifies_that_page_subtitle_is_displayed(LoginStepDefinitions.java:41)\n\tat ✽.user verifies that \"Dash \" page subtitle is displayed(file:src/test/resources/features/SmokeTest.feature:13)\n",
+  "status": "failed"
 });
 formatter.after({
   "status": "passed"

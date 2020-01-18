@@ -5,6 +5,7 @@
 /Users/alihannamli/IdeaProjects/VytrackCucumberSelenium/src/test/java/com/vytrack/pages/LoginPage.java
 /Users/alihannamli/IdeaProjects/VytrackCucumberSelenium/src/test/java/com/vytrack/step_definitions/LoginStepDefinitions.java
 /Users/alihannamli/IdeaProjects/VytrackCucumberSelenium/src/test/java/com/vytrack/step_definitions/CreateCarStepDefinitions.java
+/Users/alihannamli/IdeaProjects/VytrackCucumberSelenium/src/test/java/com/vytrack/runners/FailedRunner.java
 /Users/alihannamli/IdeaProjects/VytrackCucumberSelenium/src/test/java/com/vytrack/step_definitions/Hook.java
 /Users/alihannamli/IdeaProjects/VytrackCucumberSelenium/src/test/java/com/vytrack/pages/CreateCarPage.java
 /Users/alihannamli/IdeaProjects/VytrackCucumberSelenium/src/test/java/com/vytrack/pages/VehiclesPage.java
