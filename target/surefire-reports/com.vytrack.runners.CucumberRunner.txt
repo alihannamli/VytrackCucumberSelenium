@@ -1,10 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: com.vytrack.runners.CucumberRunner
 -------------------------------------------------------------------------------
-Tests run: 4, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 71.391 s <<< FAILURE! - in com.vytrack.runners.CucumberRunner
-Verify Manage Dashboards page(Smoke test)  Time elapsed: 14.116 s  <<< FAILURE!
-org.junit.ComparisonFailure: expected:<...ll Manage Dashboards[ ]> but was:<...ll Manage Dashboards[]>
-
-Verify Accounts page(Smoke test)  Time elapsed: 31.798 s  <<< FAILURE!
-org.junit.ComparisonFailure: expected:<[All Accounts]> but was:<[Dashboard]>
-
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 53.017 s - in com.vytrack.runners.CucumberRunner

@@ -7,13 +7,17 @@ import org.junit.runner.RunWith;
 @RunWith(Cucumber.class)
 @CucumberOptions(
 
-        features = "@target/rerun.txt",
+        features = {"src/test/resources/features/activities",
+                "src/test/resources/features/fleet"},
         glue = "com/vytrack/step_definitions",
+        dryRun = false,
+        tags = "@smoke_test",
         plugin ={"html:target/default-cucumber-reports",
-//                "json:target/cucumber.json"
+                "json:target/cucumber.json",
+                "rerun:target/rerun.txt"
         }
 
 )
 
-public class FailedRunner {
+public class RegressionRunner {
 }
