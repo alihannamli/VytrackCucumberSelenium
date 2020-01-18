@@ -109,7 +109,7 @@ public class CreateCarPage extends BasePage {
     }
 
     public void clickSaveAndClose(){
-        //waitUntilLoaderMask????
+        waitUntilLoaderMaskDisappear();
         BrowserUtils.clickWithWait(saveAndCloseToggle);
         BrowserUtils.waitForVisibility(saveAndCloseButtonFromMenuElement, 5);
         BrowserUtils.clickWithWait(saveAndCloseButtonFromMenuElement);
