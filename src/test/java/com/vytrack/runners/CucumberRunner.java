@@ -12,9 +12,11 @@ import org.junit.runner.RunWith;
         dryRun = false,
         tags = "@smoke_test",
         plugin ={"html:target/default-cucumber-reports",
-                "json:target/cucumber.json"}
+                "json:target/cucumber.json",
+                "rerun:target/rerun.txt"
+        }
 
 )
 
-public class CukesRunner {
+public class CucumberRunner {
 }
