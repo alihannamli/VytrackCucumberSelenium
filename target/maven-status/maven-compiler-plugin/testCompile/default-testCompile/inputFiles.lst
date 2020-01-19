@@ -1,5 +1,5 @@
 /Users/alihannamli/IdeaProjects/VytrackCucumberSelenium/src/test/java/com/vytrack/utilities/Driver.java
-/Users/alihannamli/IdeaProjects/VytrackCucumberSelenium/src/test/java/com/vytrack/runners/CukesRunner.java
+/Users/alihannamli/IdeaProjects/VytrackCucumberSelenium/src/test/java/com/vytrack/runners/CucumberRunner.java
 /Users/alihannamli/IdeaProjects/VytrackCucumberSelenium/src/test/java/com/vytrack/pages/CalendarEventsPage.java
 /Users/alihannamli/IdeaProjects/VytrackCucumberSelenium/src/test/java/com/vytrack/utilities/ConfigurationReader.java
 /Users/alihannamli/IdeaProjects/VytrackCucumberSelenium/src/test/java/com/vytrack/pages/LoginPage.java

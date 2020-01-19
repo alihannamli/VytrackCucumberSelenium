@@ -1,4 +1,3 @@
-com/vytrack/runners/CukesRunner.class
 com/vytrack/pages/CreateCalendarEventPage.class
 com/vytrack/utilities/ConfigurationReader.class
 com/vytrack/pages/LoginPage.class
@@ -6,6 +5,7 @@ com/vytrack/utilities/BrowserUtils.class
 com/vytrack/pages/CreateCarPage.class
 com/vytrack/step_definitions/Hook.class
 com/vytrack/step_definitions/LoginStepDefinitions.class
+com/vytrack/runners/CucumberRunner.class
 com/vytrack/step_definitions/CreateCarStepDefinitions.class
 com/vytrack/runners/FailedRunner.class
 com/vytrack/pages/CalendarEventsPage.class
